@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  padding: 20px;
+}
+
+div {
+  display: grid;
+  place-content: center;
+  font-family: sans-serif;
+  font-size: 200%;
+  border: 3px solid darkblue;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 100, 0.25);
+}

@@ -1,0 +1,50 @@
+:host {
+  display: grid;
+
+  /* Make the outer edge of the component visible */
+  border: 3px solid lightgrey;
+
+  margin: 100px;
+  height: 500px;
+
+  grid-template-columns: repeat(auto-fill, 75px);
+}
+
+
+/* All grid items */
+:host > * {
+  object-fit: cover;
+  width: 100px;
+  height: 150px;
+  padding: 5px;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 245, 161);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+
+  font-size: 9px;
+  font-weight: bold;
+  font-family: sans-serif;
+  
+  animation: unexamine 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+/* Note: `*:hover` requires <!doctype html> */
+:host > *:hover {
+  animation: examine 0.5s linear;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+/* Enlarge and straighten. */
+@keyframes examine {
+  to   { transform: scale(2) rotate(0); }
+  from { transform: scale(1) rotate(-15deg); }
+}
+
+/* Return to original size and angle. */
+@keyframes unexamine {
+  from { transform: scale(2) rotate(0); }
+  to   { transform: scale(1) rotate(-15deg); }
+}

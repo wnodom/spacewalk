@@ -1,0 +1,253 @@
+:host {
+  display: block;
+}
+
+.playing-card {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+
+  width: 2.5in;
+  height: 3.5in;
+  margin: 0;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  &.front {
+    background-color: white;
+  }
+
+  display: grid;
+
+  grid-template:
+    " rank        .       .                   "  auto
+    " corner-pip  design  .                   "  auto
+    " .           design  .                   "  1fr
+    " .           design  inverted-corner-pip "  auto
+    " .           .       inverted-rank       "  auto
+    / auto        1fr     auto
+  ;
+}
+
+.rank, .corner-pip, .design {
+  align-self: center;
+  justify-self: center;
+}
+
+.rank {
+  grid-area: rank;
+}
+
+.corner-pip {
+  grid-area: corner-pip;
+}
+
+.design {
+  align-items: center;
+  grid-area: design;
+  display: grid;
+  font-size: 54px;
+  height: 100%;
+}
+
+.design.rank-A {
+  grid-template:
+    " p1 " 1fr
+    / 1fr
+  ;
+  font-size: 144px;
+}
+
+.design.rank-J,
+.design.rank-Q,
+.design.rank-K {
+  grid-template:
+    " p1 " 1fr
+    / 1fr
+  ;
+
+  align-items: middle;
+  justify-items: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.design.rank-2 {
+  grid-template:
+    " .   .   .   " 1fr
+    " .   p1  .   " 1fr
+    " .   .   .   " 1fr
+    " .   .   .   " 1fr
+    " .   .   .   " 1fr
+    " .   p2  .   " 1fr
+    " .   .   .   " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p2 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-3 {
+  grid-template:
+    " .   p1  .   " 1fr
+    " .   p2  .   " 1fr
+    " .   p3  .   " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p3 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-4 {
+  grid-template:
+    " .   .   .   " 1fr
+    " p1  .   p2  " 1fr
+    " .   .   .   " 1fr
+    " .   .   .   " 1fr
+    " .   .   .   " 1fr
+    " p3  .   p4  " 1fr
+    " .   .   .   " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p3, .p4 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-5 {
+  grid-template:
+    " .   .   .   " 1fr
+    " p1  .   p2  " 1fr
+    " .   .   .   " 1fr
+    " .   p3  .   " 1fr
+    " .   .   .   " 1fr
+    " p4  .   p5  " 1fr
+    " .   .   .   " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p4, .p5 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-6 {
+  grid-template:
+    " .   .   .   " 1fr
+    " p1  .   p2  " 1fr
+    " .   .   .   " 1fr
+    " p3  .   p4  " 1fr
+    " .   .   .   " 1fr
+    " p5  .   p6  " 1fr
+    " .   .   .   " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p5, .p6 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-7 {
+  grid-template:
+    " p1  .   p2  " 1fr
+    " p1  p3  p2  " 1fr
+    " p4  p3  p5  " 1fr
+    " p4  .   p5  " 1fr
+    " p6  .   p7  " 1fr
+    " p6  .   p7  " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p6, .p7 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-8 {
+  grid-template:
+    " p1  .   p2  " 1fr
+    " p1  p3  p2  " 1fr
+    " p4  p3  p5  " 1fr
+    " p4  p7  p5  " 1fr
+    " p6  p7  p8  " 1fr
+    " p6  .   p8  " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p6, .p7, .p8 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-9 {
+  grid-template:
+    " p1  .   p3  " 1fr
+    " p1  .   p3  " 1fr
+    " p4  .   p5  " 1fr
+    " p4  p2  p5  " 1fr
+    " p6  p2  p7  " 1fr
+    " p6  .   p7  " 1fr
+    " p8  .   p9  " 1fr
+    " p8  .   p9  " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p6, .p7, .p8, .p9 {
+    @extend .inverted;
+  }
+}
+
+.design.rank-10 {
+  grid-template:
+    " p1  .   p3  " 1fr
+    " p1  p2  p3  " 1fr
+    " p4  p2  p5  " 1fr
+    " p4  .   p5  " 1fr
+    " p6  .   p7  " 1fr
+    " p6  p8  p7  " 1fr
+    " p9  p8  p10 " 1fr
+    " p9  .   p10 " 1fr
+    / 1fr 1fr 1fr
+  ;
+  .p6, .p7, .p8, .p9, .p10 {
+    @extend .inverted;
+  }
+}
+
+.p1  { grid-area: p1  };
+.p2  { grid-area: p2  };
+.p3  { grid-area: p3  };
+.p4  { grid-area: p4  };
+.p5  { grid-area: p5  };
+.p6  { grid-area: p6  };
+.p7  { grid-area: p7  };
+.p8  { grid-area: p8  };
+.p9  { grid-area: p9  };
+.p10 { grid-area: p10 };
+.p11 { grid-area: p11 };
+.p12 { grid-area: p12 };
+.p13 { grid-area: p13 };
+
+
+.inverted.corner-pip {
+  grid-area: inverted-corner-pip;
+}
+
+.inverted.rank {
+  grid-area: inverted-rank;
+}
+
+.inverted {
+  transform: rotate(180deg);
+}
+
+.hearts, .diamonds {
+  color: rgb(212, 0, 0);
+}
+
+.spades, .clubs {
+  color: black;
+}
+

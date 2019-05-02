@@ -1,0 +1,14 @@
+<div class="playing-card front" [ngClass]="suit">
+  <div class="rank">{{ rank }}</div>
+  <div class="corner-pip">{{ pip }}</div>
+  <div class="design" [ngClass]=" 'rank-' + rank ">
+    <img *ngIf="cardImageUrl" [src]="cardImageUrl">
+    <div *ngFor="let designPip of designPips; index as i"
+      [ngClass]=" 'p' + (i + 1) "
+    >
+      {{ pip }}
+    </div>
+  </div>
+  <div class="inverted corner-pip">{{ pip }}</div>
+  <div class="inverted rank">{{ rank }}</div>
+</div>

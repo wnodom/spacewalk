@@ -1,0 +1,14 @@
+:host {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+:host > * {
+  background-color: white;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+}
+

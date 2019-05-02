@@ -1,0 +1,14 @@
+.sandbox {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.sandbox > * {
+  background-color: white;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+}
+

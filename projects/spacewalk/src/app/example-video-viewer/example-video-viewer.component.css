@@ -1,0 +1,44 @@
+:host {
+  display: grid;
+  grid-gap: 0;
+  grid-template:
+    "  list                  .      player               " auto
+    /  minmax(200px, 1.5fr)  0.5fr  minmax(250px, 2.5fr)
+  ;
+  
+  height: 100vh;
+  overflow: hidden;
+  perspective: 70em;
+  background-color: lightblue;
+}
+
+video-list    { grid-area: list; }
+video-player  { grid-area: player; }
+
+video-list {
+  height: 130vh;
+  display: block;
+  background: black;
+  overflow-y: auto;
+  padding: 10px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  transform:
+    rotate(-5deg)
+    translate(85px, -15vh)
+    rotateY(30deg)
+  ;
+  box-shadow: 20px 15px 10px 0 rgba(0, 0, 0, 0.33);
+  outline: 15px solid black;
+  border-left: 15px solid;
+  border-right: 15px solid;
+  border-image: repeating-linear-gradient(black, black 15px, lightblue 15px, lightblue 30px) 1;
+}
+
+video-list::-webkit-scrollbar {
+  display: none;
+}
+
+.highlighted {
+  background-color: rgb(255, 253, 210);
+}

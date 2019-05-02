@@ -1,0 +1,9 @@
+<div class="chessboard" [style.transform]="transformations" [ngClass]="extras">
+
+  <ng-container *ngFor="let row of board">
+    <ng-container *ngFor="let square of row">
+      <b>{{ square }}</b>
+    </ng-container>
+  </ng-container>
+
+</div>

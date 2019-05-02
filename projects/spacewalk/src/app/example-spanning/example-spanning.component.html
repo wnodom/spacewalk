@@ -1,0 +1,4 @@
+<img *ngFor="let imageItem of imageItems | async"
+  [src]="imageItem.imageThumbnailUrl"
+  [title]="imageItem.label"
+>

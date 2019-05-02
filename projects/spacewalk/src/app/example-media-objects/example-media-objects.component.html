@@ -1,0 +1,6 @@
+<media-object
+  *ngFor="let imageItem of imageItems | async" 
+  [header]="imageItem.label"
+  [image]="imageItem.imageThumbnailUrl"
+  [description]="imageItem.description"
+></media-object>

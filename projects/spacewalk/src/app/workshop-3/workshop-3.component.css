@@ -1,0 +1,12 @@
+:host {
+  padding: 20px;
+}
+
+:host > * {
+  background-color: white;
+  padding: 20px;
+}
+
+.hero {
+  width: 100%;
+}

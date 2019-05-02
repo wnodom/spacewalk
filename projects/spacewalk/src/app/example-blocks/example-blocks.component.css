@@ -1,0 +1,18 @@
+:host {
+  padding: 20px;
+  display: grid;
+
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-gap: 20px;
+}
+
+div {
+  display: grid;
+  place-content: center;
+  font-family: sans-serif;
+  font-size: 200%;
+  border: 3px solid darkgreen;
+  border-radius: 10px;
+  background-color: rgba(0, 100, 0, 0.25);
+}

@@ -1,0 +1,56 @@
+<header>
+  <button (click)="showNav = !showNav" class="material-icons">
+    {{ showNav ? 'close' : 'menu' }}
+  </button>
+
+  <!--
+    The unusual handling of showNav ensures that the nav animations are only
+    triggered at the appropriate points.
+  -->
+  <a routerLink="/" (click)="showNav = showNav ? false : showNav">
+    <h1>{{ title }}</h1>
+  </a>
+</header>
+
+<nav
+  (click)="showNav = false"
+  [class.showNav]="showNav"
+  [class.hideNav]="showNav === false"
+>
+  <a routerLink="/">
+    Home
+  </a>
+
+  <a routerLink="/resources">
+    Resources
+  </a>
+
+  <a routerLink="/about">
+    About
+  </a>
+
+</nav>
+
+<main>
+
+  <img *ngFor="let imageItem of imageItems | async"
+    [src]="imageItem.imageUrl"
+  >
+
+</main>
+
+<footer>
+
+  <a target="_blank" href="http://www.billodom.com/">
+    Bill
+  </a>
+
+  <a target="_blank" href="https://twitter.com/wnodom">
+    Twitter
+  </a>
+
+  <a target="_blank" href="https://github.com/wnodom">
+    Github
+  </a>
+
+</footer>

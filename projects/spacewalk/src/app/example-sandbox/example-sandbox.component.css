@@ -1,0 +1,25 @@
+.sandbox {
+  background-color: gold;
+  padding: 20px;
+}
+
+.sandbox > * {
+  background-color: white;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.content {
+}
+
+.bob {
+  width: 100%;
+}
+
+.footer {
+}
+

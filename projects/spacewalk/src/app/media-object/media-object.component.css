@@ -1,0 +1,38 @@
+:host {
+  display: grid;
+
+  grid-template:
+    " img    header              " auto
+    " img    description         " minmax(100px, 1fr)
+    / 100px  minmax(0, 1fr)
+  ;
+  grid-gap: 20px;
+
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+img {
+  grid-area: img;
+  height: 150px;
+  width: 100px;
+  object-fit: cover;
+  border: 2px solid lightgrey;
+}
+
+header {
+  grid-area: header;
+  font-weight: bold;
+  font-size: 125%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  grid-area: description;
+  overflow: hidden;
+}

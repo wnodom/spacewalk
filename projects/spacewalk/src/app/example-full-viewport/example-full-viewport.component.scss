@@ -1,0 +1,149 @@
+:host {
+  display: grid;
+
+  grid-gap: 0;
+
+  grid-template:
+                  " header            header "  auto
+      [nav-start] " main              main   "  1fr   [nav-end]
+                  " footer            footer "  auto
+    / [nav-start]   225px [nav-end]   1fr
+  ;
+
+  height: 100vh;
+
+  padding: 0;
+}
+
+header {
+  grid-area: header;
+
+  display: grid;
+
+  grid-template:
+    " navToggle  title " auto
+    / auto       minmax(0, 1fr)
+  ;
+
+  background: lightgrey;
+  padding: 15px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.33);
+  z-index: 1;
+
+  button {
+    grid-area: navToggle;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
+  }
+
+  a {
+    grid-area: title;
+  }
+
+  h1 {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+nav {
+  grid-area: nav;
+
+  transform: translateX(-9999px);
+
+  opacity: 0.95;
+  background: lightgrey;
+  border-right: 3px solid darkgrey;
+  padding: 15px;
+  overflow: auto;
+
+  & > * {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  justify-items: center;
+  overflow: auto;
+  padding: 15px;
+  padding-left: 50px;
+
+  img {
+    width: 700px;
+    margin: 50px;
+    display: block;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.33);
+  }
+}
+
+footer {
+  grid-area: footer;
+  background: lightgrey;
+  padding: 15px;
+  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.33);
+  z-index: 1;
+
+  a {
+    color: grey;
+  }
+
+  // Separate footer links with bullet characters
+  a:not(:last-child)::after {
+    padding-left: 10px;
+    padding-right: 10px;
+    content: '\2022';
+  }
+}
+
+header, footer, nav {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.currentSelection {
+  font-weight: bold;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-500px); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-500px); }
+}
+
+.showNav {
+  animation: slideIn 500ms;
+  animation-fill-mode: forwards;
+}
+
+.hideNav {
+  animation: slideOut 500ms;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 600px) {
+  header, footer {
+    font-size: 75%;
+  }
+}
+

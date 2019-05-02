@@ -1,0 +1,6 @@
+<video-thumbnail
+  [video]="v"
+  *ngFor="let v of videoData"
+  (click)="setCurrentVideo(v)"
+  [class.highlighted]="v === currentVideo"
+></video-thumbnail>

@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin-left: 25%;
+  margin-top: 100px;
+  perspective-origin: top;
+  transform-style: preserve-3d;
+  perspective: 650px;
+}
+
+.chessboard {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows:    repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  padding: 10px;
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+
+  b:nth-child(16n+1),
+  b:nth-child(16n+3),
+  b:nth-child(16n+5),
+  b:nth-child(16n+7),
+  b:nth-child(16n+10),
+  b:nth-child(16n+12),
+  b:nth-child(16n+14),
+  b:nth-child(16n) {
+    background-color: cornsilk;
+  }
+
+  b:nth-child(16n+2),
+  b:nth-child(16n+4),
+  b:nth-child(16n+6),
+  b:nth-child(16n+8),
+  b:nth-child(16n+9),
+  b:nth-child(16n+11),
+  b:nth-child(16n+13),
+  b:nth-child(16n+15) {
+    background-color: tan;
+  }
+}
+
+.disco {
+  animation: disco 0.3s linear infinite alternate;
+}
+
+@keyframes disco {
+  from { grid-gap: 0;    }
+  to   { grid-gap: 50px; }
+}

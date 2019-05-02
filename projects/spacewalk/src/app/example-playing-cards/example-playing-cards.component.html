@@ -1,0 +1,5 @@
+<ng-container *ngFor="let suit of suits">
+  <ng-container *ngFor="let rank of ranks">
+    <playing-card [rank]="rank" [suit]="suit"></playing-card>
+  </ng-container>
+</ng-container>

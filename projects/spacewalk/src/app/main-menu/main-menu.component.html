@@ -1,0 +1,21 @@
+<ul>
+  <li routerLinkActive="currentSelection">
+    <a routerLink="/welcome">What? Who?</a>
+  </li>
+
+  <li *ngFor="let example of examples"
+    routerLinkActive="currentSelection"
+  >
+    <a [routerLink]=" '/' + example.path ">
+      {{ example.component.label || example.path }}
+    </a>
+  </li>
+
+  <li routerLinkActive="currentSelection">
+    <a routerLink="/about">Say "What?" Again</a>
+  </li>
+
+  <li routerLinkActive="currentSelection">
+    <a routerLink="/resources">And Furthermore</a>
+  </li>
+</ul>

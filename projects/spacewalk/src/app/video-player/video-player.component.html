@@ -1,0 +1,22 @@
+<ng-container *ngIf="videoUrl; else instructions">
+
+  <div class="video-wrapper">
+    <iframe
+      width="560"
+      height="315"
+      [src]="videoUrl"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="video-title">{{ video.title }}</div>
+  <div class="video-author">{{ video.author }}</div>
+
+</ng-container>
+
+<ng-template #instructions>
+  <div class="instructions">
+    Please select a video from the list.
+  </div>
+</ng-template>

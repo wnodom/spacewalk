@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  height: 100vh;
+
+  place-content: center;
+
+  justify-items: end;
+
+  font-size: 200%;
+
+  color: white;
+
+  background-color: black;
+  background-image: url('/assets/misc/The_star_cluster_Messier_18_and_its_surroundings.jpg');
+  background-size: cover;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 0 20px black;
+}
+
+h2 {
+  margin-top: 100px;
+}

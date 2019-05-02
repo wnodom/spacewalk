@@ -1,0 +1,6 @@
+<video-list
+  [videoData]="videosObservable | async"
+  (selectVideo)="setCurrentVideo($event)"
+></video-list>
+
+<video-player [video]="currentVideo"></video-player>

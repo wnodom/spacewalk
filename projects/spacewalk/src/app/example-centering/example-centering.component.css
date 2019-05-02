@@ -1,0 +1,12 @@
+:host {
+  display: grid;
+  height: 100vh;
+
+  place-items: center;
+
+  background-size: contain;
+  background-image:
+    radial-gradient(circle at 100%, #000, #333 65%, #eee 75%, transparent 75%),
+    url("/assets/misc/starfield.png")
+  ;
+}

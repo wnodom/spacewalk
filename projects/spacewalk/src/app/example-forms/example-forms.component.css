@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  padding: 20px;
+  font-size: 150%;
+  background: lightgrey;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+  grid-template-columns:
+    minmax(200px, 1fr)
+    [input-start] minmax(300px, 3fr) [input-end]
+  ;
+  width: 75%;
+}
+
+input {
+  grid-column: input-start;
+
+  font-family: sans-serif;
+  font-size: inherit;
+  border: 2px solid darkgrey;
+
+  padding: 10px;
+}
+
+label {
+  text-align: right;
+}

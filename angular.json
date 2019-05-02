@@ -1,0 +1,158 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "spacewalk": {
+      "root": "projects/spacewalk/",
+      "sourceRoot": "projects/spacewalk/src",
+      "projectType": "application",
+      "prefix": "",
+      "schematics": {
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:component": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/spacewalk",
+            "index": "projects/spacewalk/src/index.html",
+            "main": "projects/spacewalk/src/main.ts",
+            "polyfills": "projects/spacewalk/src/polyfills.ts",
+            "tsConfig": "projects/spacewalk/tsconfig.app.json",
+            "assets": [
+              "projects/spacewalk/src/favicon.ico",
+              "projects/spacewalk/src/assets"
+            ],
+            "styles": [
+              "projects/spacewalk/src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/spacewalk/src/environments/environment.ts",
+                  "with": "projects/spacewalk/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "spacewalk:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "spacewalk:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "spacewalk:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/spacewalk/src/test.ts",
+            "polyfills": "projects/spacewalk/src/polyfills.ts",
+            "tsConfig": "projects/spacewalk/tsconfig.spec.json",
+            "karmaConfig": "projects/spacewalk/karma.conf.js",
+            "styles": [
+              "projects/spacewalk/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/spacewalk/src/favicon.ico",
+              "projects/spacewalk/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/spacewalk/tsconfig.app.json",
+              "projects/spacewalk/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "spacewalk-e2e": {
+      "root": "projects/spacewalk-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/spacewalk-e2e/protractor.conf.js",
+            "devServerTarget": "spacewalk:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "spacewalk:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/spacewalk-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "spacewalk"
+}
