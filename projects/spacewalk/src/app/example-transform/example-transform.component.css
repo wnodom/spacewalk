@@ -1,8 +1,8 @@
 :host {
   display: grid;
 
-  /* Make the outer edge of the component visible */
-  border: 3px solid lightgrey;
+  /* Uncomment to make the outer edge of the component visible */
+  /*border: 3px solid lightgrey;*/
 
   margin: 100px;
   height: 500px;

@@ -33,8 +33,12 @@ video-list {
   border-left: 15px solid;
   border-right: 15px solid;
   border-image: repeating-linear-gradient(black, black 15px, lightblue 15px, lightblue 30px) 1;
+
+  /* Hide scrollbar on Firefox */
+  scrollbar-width: none;
 }
 
+/* Hide scrollbar on Chrome, Safari */
 video-list::-webkit-scrollbar {
   display: none;
 }

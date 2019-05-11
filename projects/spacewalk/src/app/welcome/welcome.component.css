@@ -1,26 +1,140 @@
 :host {
   display: grid;
   height: 100vh;
+  place-items: center;
+  overflow: hidden;
+  background: black;
+  text-align: center;
+}
 
-  place-content: center;
+.info {
+  z-index: 2;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
 
-  justify-items: end;
+  color: #ffd54e;
+  text-shadow: 0 0 20px black;
+  transform:
+    translateY(-80px)
+    perspective(100px)
+    rotateX(10deg)
+  ;
+}
 
+.info h1 {
+  text-transform: uppercase;
+  font-size: 700%;
+}
+
+.info h2, h3 {
   font-size: 200%;
+}
 
-  color: white;
+.benny {
+  z-index: 1;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  animation: whee 20s infinite linear;
+}
 
-  background-color: black;
-  background-image: url('/assets/misc/The_star_cluster_Messier_18_and_its_surroundings.jpg');
+@keyframes whee {
+  from {
+    transform: translateX(-5000px) rotate(0deg);
+  }
+  to {
+    transform: translateX(5000px) rotate(719deg);
+  }
+}
+
+/*
+ * Hyperspace effect adapted from <https://codepen.io/noahblon/pen/GKflw>
+ * by Noah Blon <https://codepen.io/noahblon/>
+ */
+
+.wall {
+  background: url(/assets/misc/hyperspace-background.jpg);
   background-size: cover;
 }
 
-h1, h2 {
-  margin: 0;
-  padding: 0;
-  text-shadow: 0 0 20px black;
+.scene {
+  width: 1px;
+  height: 1px;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  perspective: 5px;
+  perspective-origin: 50% 50%;
+  position: relative;
 }
 
-h2 {
-  margin-top: 100px;
+.wrap {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  top: -500px;
+  transform-style: preserve-3d;
+  animation: move 12s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+.wrap:nth-child(2) {
+  animation: move 12s infinite linear;
+  animation-delay: 6s;
+}
+
+.wall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: fade 12s infinite linear;
+  animation-delay: 0;
+}
+
+.wrap:nth-child(2) .wall {
+  animation-delay: 6s;
+}
+
+.wall-right {
+  transform: rotateY(90deg) translateZ(500px);
+}
+
+.wall-left {
+  transform: rotateY(-90deg) translateZ(500px);
+}
+
+.wall-top {
+  transform: rotateX(90deg) translateZ(500px);
+}
+
+.wall-bottom {
+  transform: rotateX(-90deg) translateZ(500px);
+}
+
+.wall-back {
+  transform: rotateX(180deg) translateZ(500px);
+}
+
+@keyframes move {
+  0%{
+    transform: translateZ(-500px) rotate(0deg);
+  }
+  100%{
+    transform: translateZ(500px) rotate(0deg);
+  }
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }

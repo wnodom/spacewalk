@@ -1,55 +1,36 @@
 :host {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-gap: 20px;
 
+  min-height: 100vh;
+  place-content: center;
   padding: 20px;
-  
-  height: 100vh;
-  
+  font-size: 150%;
   background-color: black;
   background-image: url('/assets/misc/starfield.png');
   background-size: contain;
-
-  justify-items: center;
-
-  font-size: 150%;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-auto-rows: 150px;
-  grid-gap: 15px;
-  width: 100%;
-  padding: 0;
-}
-
-li {
-  border-radius: 10px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 0 20px black;
-  background-color: rgba(255, 255, 255, 0.5);
-  list-style: none;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-}
-
-li:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 0 0 20px 5px cornsilk;
-  background-color: cornsilk;
-  color: black;
-  text-shadow: none;
 }
 
 a {
-  display: block;
-  padding: 20px;
+  display: grid;
   width: 100%;
   height: 100%;
+  padding: 20px;
+  place-content: center;
+  text-align: center;
   text-decoration: none;
-  color: inherit;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 20px black;
+}
+
+a:hover {
+  color: black;
+  background-color: cornsilk;
+  box-shadow: 0 0 20px 5px cornsilk;
+  text-shadow: none;
 }

@@ -16,13 +16,11 @@ import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.compo
 import { WelcomeComponent } from './welcome/welcome.component';
 
 import { examples } from './examples';
-import { workshops } from './workshops';
 
 @NgModule({
   declarations: [
 
     examples.map( example => example.component ),
-    workshops.map( workshop => workshop.component ),
 
     AppComponent,
     AboutComponent,

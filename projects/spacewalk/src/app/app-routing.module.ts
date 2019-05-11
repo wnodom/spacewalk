@@ -7,7 +7,6 @@ import { ResourcesComponent } from './resources/resources.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 import { examples } from './examples';
-import { workshops } from './workshops';
 
 const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
@@ -16,7 +15,6 @@ const routes: Routes = [
   { path: 'resources', component: ResourcesComponent },
   { path: 'welcome', component: WelcomeComponent },
   ...examples,
-  ...workshops,
   { path: '**', redirectTo: '' }
 ];
 

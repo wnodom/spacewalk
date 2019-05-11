@@ -140,10 +140,3 @@ li {
   animation: slideOut 500ms;
   animation-fill-mode: forwards;
 }
-
-@media (max-width: 600px) {
-  header, footer {
-    font-size: 75%;
-  }
-}
-
