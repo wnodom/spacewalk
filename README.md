@@ -1,6 +1,6 @@
 # Spacewalk
 
-This is a set of examples I [Bill Odom](http://www.billodom.com/) created for use in workshops and presentations on building web applications using modern CSS (especially CSS Grid). You can find the latest version here:
+This is a set of examples I ([Bill Odom](http://www.billodom.com/)) created for use in workshops and presentations on building web applications using modern CSS (especially CSS Grid). You can find the latest version here:
 
 > [Spacewalk on Github](https://github.com/wnodom/spacewalk)
 
