@@ -1111,7 +1111,7 @@ export const spaceImagesData: any = {
     },
     {
       "description": "planetary nebula",
-      "imageFilename": "NGC_3242_\"Ghost_of_Jupiter\".png",
+      "imageFilename": "NGC_3242_Ghost_of_Jupiter.png",
       "infoUrl": "https://en.wikipedia.org/wiki/NGC_3242",
       "label": "Ghost of Jupiter"
     },
@@ -1194,7 +1194,7 @@ export const spaceImagesData: any = {
     },
     {
       "description": "planetary nebula",
-      "imageFilename": "IC_3568_\"Lemon_Slice\".jpg",
+      "imageFilename": "IC_3568_Lemon_Slice.jpg",
       "infoUrl": "https://en.wikipedia.org/wiki/Lemon_Slice_Nebula",
       "label": "Lemon Slice Nebula"
     },
