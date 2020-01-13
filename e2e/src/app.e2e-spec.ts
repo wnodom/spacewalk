@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Angular and CSS Grid');
+    expect(page.getTitleText()).toEqual('spacewalk app is running!');
   });
 
   afterEach(async () => {

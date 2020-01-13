@@ -6,7 +6,7 @@ This is a set of examples I ([Bill Odom](http://www.billodom.com/)) created for 
 
 ---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
 ## Development server
 
