@@ -249,9 +249,9 @@ export const spaceImagesData: any = {
     },
     {
       "description": "university president",
-      "imageFilename": "France_A._C\u00f3rdova_official_photo.jpg",
+      "imageFilename": "France_A._Córdova_official_photo.jpg",
       "infoUrl": "https://en.wikipedia.org/wiki/France_A._C%C3%B3rdova",
-      "label": "France A. C\u00f3rdova"
+      "label": "France A. Córdova"
     },
     {
       "description": "astronomer",
@@ -446,9 +446,9 @@ export const spaceImagesData: any = {
     },
     {
       "description": "Czech astronomer, asteroid discoverer",
-      "imageFilename": "Lenka_Kotkov\u00e1,_Ond\u0159ejov_Astronomical.jpg",
+      "imageFilename": "Lenka_Kotková,_Ondřejov_Astronomical.jpg",
       "infoUrl": "https://en.wikipedia.org/wiki/Lenka_Kotkov%C3%A1",
-      "label": "Lenka Kotkov\u00e1"
+      "label": "Lenka Kotková"
     },
     {
       "description": "French astronomer",
@@ -524,9 +524,9 @@ export const spaceImagesData: any = {
     },
     {
       "description": "Belgian astrophysicist",
-      "imageFilename": "Ya\u00ebl_Naz\u00e9,_Espace_des_sciences,_16_octobre_2012.jpg",
+      "imageFilename": "Yaël_Nazé,_Espace_des_sciences,_16_octobre_2012.jpg",
       "infoUrl": "https://en.wikipedia.org/wiki/Ya%C3%ABl_Naz%C3%A9",
-      "label": "Ya\u00ebl Naz\u00e9"
+      "label": "Yaël Nazé"
     },
     {
       "description": "American astrophysicist",
@@ -898,12 +898,12 @@ export const spaceImagesData: any = {
     },
     {
       "description": "Astronaut, politician, doctor",
-      "imageFilename": "20140927_Femmes_de_science_-_Claudie_Haigner\u00e9_02.jpg",
+      "imageFilename": "20140927_Femmes_de_science_-_Claudie_Haigneré_02.jpg",
       "infoUrl": "https://en.wikipedia.org/wiki/Claudie_Haigner%C3%A9",
-      "label": "Claudie Haigner\u00e9"
+      "label": "Claudie Haigneré"
     },
     {
-      "description": "American  engineer, a former United States Navy officer, and a former NASA astronaut",
+      "description": "American engineer, a former United States Navy officer, and a former NASA astronaut",
       "imageFilename": "Susan_Still-Kilrain.jpg",
       "infoUrl": "https://en.wikipedia.org/wiki/Susan_Kilrain",
       "label": "Susan Still Kilrain"
