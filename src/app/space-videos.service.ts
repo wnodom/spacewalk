@@ -31,7 +31,7 @@ export class SpaceVideosService {
   load(endpoint: string): Observable<SpaceVideo[]> {
 
     // Coerce the raw data into a SpaceVideo array.
-    let spaceVideos =
+    const spaceVideos =
       (spaceVideosData as Record<string, unknown>)[endpoint] as SpaceVideo[];
 
     return of(spaceVideos).pipe(map(addVideoUrl));
