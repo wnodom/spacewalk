@@ -18,7 +18,7 @@ export class ExampleTransformComponent {
 
   constructor(svc: SpaceImagesService) {
     this.imageItems = svc.load('women-in-space')
-      .pipe(map(data => shuffleArrayInPlace([...data])))
+      .pipe(map(data => shuffleArrayInPlace([...data]) as SpaceImage[]))
     ;
   }
 }

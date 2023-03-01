@@ -1,6 +1,6 @@
-export function shuffleArrayInPlace(array: Array<any>) {
+export function shuffleArrayInPlace(array: Array<unknown>) {
   let currentIndex = array.length;
-  let temporaryValue: any;
+  let temporaryValue: unknown;
   let randomIndex: number;
 
   // While there remain elements to shuffle...

@@ -1,5 +1,5 @@
-/* tslint:disable */
-export const spaceImagesData: any = {
+export const spaceImagesData: unknown = JSON.parse(`
+{
   "posters": [
     {
       "description": "",
@@ -96,7 +96,7 @@ export const spaceImagesData: any = {
       "imageFilename": "venus.jpeg",
       "infoUrl": "",
       "label": "Venus"
-    },
+    }
   ],
 
   "planets": [
@@ -1463,5 +1463,6 @@ export const spaceImagesData: any = {
       "infoUrl": "https://en.wikipedia.org/wiki/M_1-42",
       "label": "M 1-42"
     }
-  ],
-};
+  ]
+}
+`);

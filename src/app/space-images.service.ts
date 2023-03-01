@@ -65,8 +65,13 @@ function addImageUrls(items: SpaceImage[], endpoint: string): SpaceImage[] {
 export class SpaceImagesService {
 
   load(endpoint: string): Observable<SpaceImage[]> {
-    return of(spaceImagesData[endpoint]).pipe(
-      map((allItems: any) => addImageUrls(allItems, endpoint))
+
+    // Coerce the raw data into a SpaceImage array.
+    const spaceImages =
+      (spaceImagesData as Record<string, unknown>)[endpoint] as SpaceImage[];
+
+    return of(spaceImages).pipe(
+      map(allItems => addImageUrls(allItems, endpoint))
     );
   }
 

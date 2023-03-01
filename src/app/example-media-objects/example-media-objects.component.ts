@@ -19,7 +19,7 @@ export class ExampleMediaObjectsComponent {
   constructor(svc: SpaceImagesService) {
     this.imageItems = svc.load('women-in-astronomy')
       .pipe(
-        map(data => shuffleArrayInPlace([...data]))
+        map(data => shuffleArrayInPlace([...data]) as SpaceImage[])
       )
     ;
   }
