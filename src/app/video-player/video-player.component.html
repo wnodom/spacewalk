@@ -1,14 +1,11 @@
 <ng-container *ngIf="video; else instructions">
 
-  <div class="video-wrapper">
-    <iframe
-      width="560"
-      height="315"
-      [src]="videoUrl"
-      frameborder="0"
-      allowfullscreen
-    ></iframe>
-  </div>
+  <iframe
+    class="video"
+    [src]="videoUrl"
+    frameborder="0"
+    allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope;"
+  ></iframe>
 
   <div class="video-title">{{ video.title }}</div>
   <div class="video-author">{{ video.author }}</div>
