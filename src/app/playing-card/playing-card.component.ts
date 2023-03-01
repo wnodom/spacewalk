@@ -9,7 +9,6 @@ const pips: Record<string, string> = {
   spades:   '\u2660',
 };
 
-/* tslint:disable object-literal-key-quotes */
 const rankToNumberOfPips: Record<string, number> = {
   'A' :  1,
   '2' :  2,
