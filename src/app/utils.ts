@@ -1,6 +1,5 @@
 export function shuffleArrayInPlace(array: Array<unknown>) {
   let currentIndex = array.length;
-  let temporaryValue: unknown;
   let randomIndex: number;
 
   // While there remain elements to shuffle...
@@ -10,9 +9,8 @@ export function shuffleArrayInPlace(array: Array<unknown>) {
     currentIndex -= 1;
 
     // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+    [ array[currentIndex], array[randomIndex] ] =
+      [ array[randomIndex], array[currentIndex] ]
   }
 
   return array;
