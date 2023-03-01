@@ -8,5 +8,5 @@ import { SpaceVideo } from '../space-videos.service';
   styleUrls: ['./video-thumbnail.component.css']
 })
 export class VideoThumbnailComponent {
-  @Input() video: SpaceVideo | undefined;
+  @Input() video?: SpaceVideo;
 }

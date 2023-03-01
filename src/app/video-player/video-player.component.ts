@@ -10,23 +10,23 @@ import { SpaceVideo } from '../space-videos.service';
 })
 export class VideoPlayerComponent {
 
-  private theVideo: SpaceVideo | undefined;
+  private _video?: SpaceVideo;
+
+  videoUrl?: SafeUrl;
 
   // Create a trusted version of the video URL each time
   // the input video changes.
   //
   @Input() set video(value: SpaceVideo | undefined) {
-    this.theVideo = value;
-    if (value && value.videoUrl) {
+    this._video = value;
+    if (value?.videoUrl) {
       this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(
         value.videoUrl
       );
     }
   }
 
-  get video() { return this.theVideo; }
-
-  videoUrl: SafeUrl | undefined;
+  get video() { return this._video; }
 
   constructor(private domSanitizer: DomSanitizer) { }
 }

@@ -12,9 +12,9 @@ import { SpaceVideosService, SpaceVideo } from '../space-videos.service';
 export class ExampleVideoViewerComponent {
   static label = 'And Yet It Moves';
 
-  currentVideo: SpaceVideo | undefined;
+  currentVideo?: SpaceVideo;
 
-  videosObservable: Observable<SpaceVideo[]> | undefined;
+  videosObservable: Observable<SpaceVideo[]>;
 
   setCurrentVideo(v: SpaceVideo) {
     this.currentVideo = v;

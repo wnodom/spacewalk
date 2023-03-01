@@ -1,5 +1,5 @@
 <video-list
-  [videoData]="videosObservable | async"
+  [videoData]="(videosObservable | async) ?? []"
   (selectVideo)="setCurrentVideo($event)"
 ></video-list>
 
