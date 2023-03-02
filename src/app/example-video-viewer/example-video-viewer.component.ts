@@ -6,7 +6,7 @@ import { SpaceVideosService, SpaceVideo } from '../space-videos.service';
 @Component({
   selector: 'example-video-viewer',
   templateUrl: './example-video-viewer.component.html',
-  styleUrls: ['./example-video-viewer.component.css'],
+  styleUrls: ['./example-video-viewer.component.scss'],
 })
 export class ExampleVideoViewerComponent {
   static label = 'And Yet It Moves';

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'example-debugging',
   templateUrl: './example-debugging.component.html',
-  styleUrls: ['./example-debugging.component.css']
+  styleUrls: ['./example-debugging.component.scss']
 })
 export class ExampleDebuggingComponent {
   static label = 'Good Grids Gone Bad';

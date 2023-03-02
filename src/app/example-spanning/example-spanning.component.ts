@@ -6,7 +6,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
 @Component({
   selector: 'example-spanning',
   templateUrl: './example-spanning.component.html',
-  styleUrls: ['./example-spanning.component.css']
+  styleUrls: ['./example-spanning.component.scss']
 })
 export class ExampleSpanningComponent {
   static label = 'It\'s All Going According to Span';

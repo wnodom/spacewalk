@@ -5,7 +5,7 @@ import { SpaceVideo } from '../space-videos.service';
 @Component({
   selector: 'video-list',
   templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.css']
+  styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent {
   @Input() videoData: SpaceVideo[] = [];

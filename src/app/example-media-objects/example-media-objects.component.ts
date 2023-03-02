@@ -9,7 +9,7 @@ import { shuffleArrayInPlace } from '../utils';
 @Component({
   selector: 'example-media-objects',
   templateUrl: './example-media-objects.component.html',
-  styleUrls: ['./example-media-objects.component.css']
+  styleUrls: ['./example-media-objects.component.scss']
 })
 export class ExampleMediaObjectsComponent {
   static label = 'I Object!';

@@ -6,7 +6,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
 @Component({
   selector: 'example-image-gallery',
   templateUrl: './example-image-gallery.component.html',
-  styleUrls: ['./example-image-gallery.component.css']
+  styleUrls: ['./example-image-gallery.component.scss']
 })
 export class ExampleImageGalleryComponent {
   static label = 'Ooooh Pretty';

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'example-blocks',
   templateUrl: './example-blocks.component.html',
-  styleUrls: ['./example-blocks.component.css']
+  styleUrls: ['./example-blocks.component.scss']
 })
 export class ExampleBlocksComponent {
   static label = 'Playing With Blocks';

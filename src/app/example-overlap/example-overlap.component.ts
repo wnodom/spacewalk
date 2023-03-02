@@ -6,7 +6,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
 @Component({
   selector: 'example-overlap',
   templateUrl: './example-overlap.component.html',
-  styleUrls: ['./example-overlap.component.css']
+  styleUrls: ['./example-overlap.component.scss']
 })
 export class ExampleOverlapComponent {
   static label = 'When Worlds Collide';

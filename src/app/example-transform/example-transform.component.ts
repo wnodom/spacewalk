@@ -9,7 +9,7 @@ import { shuffleArrayInPlace } from '../utils';
 @Component({
   selector: 'example-transform',
   templateUrl: './example-transform.component.html',
-  styleUrls: ['./example-transform.component.css']
+  styleUrls: ['./example-transform.component.scss']
 })
 export class ExampleTransformComponent {
   static label = 'I Want to Break Free';

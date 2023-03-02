@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'example-playing-cards',
   templateUrl: './example-playing-cards.component.html',
-  styleUrls: ['./example-playing-cards.component.css']
+  styleUrls: ['./example-playing-cards.component.scss']
 })
 export class ExamplePlayingCardsComponent {
   static label = 'Playing With a Full Deck';
