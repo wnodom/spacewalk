@@ -12,7 +12,7 @@ const smallStep = 1;
 export class ExampleChessboardComponent implements OnInit {
   static label = 'The Grid of Kings';
 
-  board: string[][] = Array(8).fill( Array(8).fill('') );
+  board: string[][] = Array<string[]>(8).fill( Array<string>(8).fill('') );
   rotx = 0;
   roty = 0;
   rotz = 0;
@@ -22,11 +22,11 @@ export class ExampleChessboardComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) { }
 
   calculateTransformations() {
-    this.transformations = this.sanitizer.bypassSecurityTrustStyle(
-        ' rotateX(' + this.rotx + 'deg) '
-      + ' rotateY(' + this.roty + 'deg) '
-      + ' rotateZ(' + this.rotz + 'deg) '
-    );
+    this.transformations = this.sanitizer.bypassSecurityTrustStyle(`
+      rotateX(${ this.rotx }deg)
+      rotateY(${ this.roty }deg)
+      rotateZ(${ this.rotz }deg)
+    `);
   }
 
   @HostListener('window:keydown', ['$event'])

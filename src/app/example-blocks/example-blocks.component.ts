@@ -12,7 +12,7 @@ export class ExampleBlocksComponent {
 
   constructor() {
     for (let i = 1; i < 40; i++) {
-      this.labels.push('' + i);
+      this.labels.push(`${i}`);
     }
   }
 }

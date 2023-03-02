@@ -1,4 +1,4 @@
-export function shuffleArrayInPlace(array: Array<unknown>) {
+export function shuffleArrayInPlace(array: unknown[]) {
   let currentIndex = array.length;
   let randomIndex: number;
 

@@ -8,13 +8,30 @@
       "files": [
         "*.ts"
       ],
+      "parserOptions": {
+        "project": ["tsconfig.(app|spec).json"]
+      },
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:@angular-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
+        "plugin:@angular-eslint/all",
+        "plugin:@angular-eslint/recommended--extra",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "rules": {}
+      "rules": {
+        "@typescript-eslint/no-extraneous-class": "off",
+        "@angular-eslint/prefer-on-push-component-change-detection": "off",
+        "@angular-eslint/prefer-output-readonly": "off",
+
+        // @angular-eslint/sort-ngmodule-metadata-arrays is supposed to
+        // eventually be replaced by @angular-eslint/sort-imports-metadata,
+        // at which point this rule may be reinstated (especially if it
+        // allows for import groups). Here's the related issue:
+        // https://github.com/angular-eslint/angular-eslint/issues/1232
+        "@angular-eslint/sort-ngmodule-metadata-arrays": "off"
+      }
     },
     {
       "files": [
@@ -23,7 +40,41 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "@angular-eslint/template/accessibility-elements-content": "error",
+        "@angular-eslint/template/accessibility-table-scope": "error",
+        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-eslint/template/button-has-type": "error",
+        "@angular-eslint/template/no-any": "error",
+        "@angular-eslint/template/no-autofocus": "error",
+        "@angular-eslint/template/no-call-expression": "error",
+        "@angular-eslint/template/no-distracting-elements": "error",
+        "@angular-eslint/template/no-duplicate-attributes": "error",
+        "@angular-eslint/template/no-interpolation-in-attributes": "error",
+        "@angular-eslint/template/no-negated-async": "error",
+        "@angular-eslint/template/no-positive-tabindex": "error",
+
+        "@angular-eslint/template/conditional-complexity": [
+          "error",
+          {
+            "maxComplexity": 3
+          }
+        ],
+
+        "@angular-eslint/template/cyclomatic-complexity": [
+          "error",
+          {
+            "maxComplexity": 3
+          }
+        ],
+
+        "@angular-eslint/template/no-inline-styles": [
+          "error",
+          {
+            "allowBindToStyle": true
+          }
+        ]
+      }
     }
   ]
 }

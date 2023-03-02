@@ -44,7 +44,7 @@ export class PlayingCardComponent implements OnInit {
     this.pip = pips[this.suit];
 
     if (numPips > 0) {
-      this.designPips = Array(numPips).fill(this.pip);
+      this.designPips = Array<string>(numPips).fill(this.pip);
     } else {
       this.cardImageUrl = imageDir + '/' + this.rank + '-' + this.suit + '.png';
     }

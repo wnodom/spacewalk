@@ -1,5 +1,9 @@
 <header>
-  <button (click)="showNav = !showNav" class="material-icons">
+  <button
+    type="button"
+    class="material-icons"
+    (click)="showNav = !showNav"
+  >
     {{ showNav ? 'close' : 'menu' }}
   </button>
 

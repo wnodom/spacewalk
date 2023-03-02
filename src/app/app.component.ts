@@ -53,7 +53,7 @@ export class AppComponent {
     }
 
     if (destination) {
-      this.router.navigate([destination]);
+      void this.router.navigate([destination]);
     }
   }
 }
