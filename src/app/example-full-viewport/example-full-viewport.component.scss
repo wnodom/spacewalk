@@ -117,10 +117,6 @@ li {
   margin-bottom: 10px;
 }
 
-.currentSelection {
-  font-weight: bold;
-}
-
 @keyframes slideIn {
   from { transform: translateX(-500px); }
   to   { transform: translateX(0); }
