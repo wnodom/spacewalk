@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'example-centering',
   templateUrl: './example-centering.component.html',
-  styleUrls: ['./example-centering.component.scss']
+  styleUrls: ['./example-centering.component.scss'],
+  standalone: true
 })
 export class ExampleCenteringComponent {
   static label = 'Best Feature Ever!!1!';

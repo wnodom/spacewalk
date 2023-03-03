@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 import { SpaceVideo } from '../space-videos.service';
@@ -6,7 +7,9 @@ import { SpaceVideo } from '../space-videos.service';
 @Component({
   selector: 'video-player',
   templateUrl: './video-player.component.html',
-  styleUrls: ['./video-player.component.scss']
+  styleUrls: ['./video-player.component.scss'],
+  standalone: true,
+  imports: [NgIf]
 })
 export class VideoPlayerComponent {
 

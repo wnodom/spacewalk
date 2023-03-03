@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+
+import { PlayingCardComponent } from '../playing-card/playing-card.component';
 
 @Component({
   selector: 'example-playing-cards',
   templateUrl: './example-playing-cards.component.html',
-  styleUrls: ['./example-playing-cards.component.scss']
+  styleUrls: ['./example-playing-cards.component.scss'],
+  standalone: true,
+  imports: [NgFor, PlayingCardComponent]
 })
 export class ExamplePlayingCardsComponent {
   static label = 'Playing With a Full Deck';

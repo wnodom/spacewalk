@@ -3,7 +3,8 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'media-object',
   templateUrl: './media-object.component.html',
-  styleUrls: ['./media-object.component.scss']
+  styleUrls: ['./media-object.component.scss'],
+  standalone: true
 })
 export class MediaObjectComponent {
   @Input() header?: string;

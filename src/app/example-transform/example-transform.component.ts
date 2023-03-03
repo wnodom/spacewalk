@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { NgFor, AsyncPipe } from '@angular/common';
+import { Observable, map } from 'rxjs';
 
+import { CaptionedImageComponent } from '../captioned-image/captioned-image.component';
 import { SpaceImagesService, SpaceImage } from '../space-images.service';
-
 import { shuffleArrayInPlace } from '../utils';
 
 @Component({
   selector: 'example-transform',
   templateUrl: './example-transform.component.html',
-  styleUrls: ['./example-transform.component.scss']
+  styleUrls: ['./example-transform.component.scss'],
+  standalone: true,
+  imports: [NgFor, CaptionedImageComponent, AsyncPipe]
 })
 export class ExampleTransformComponent {
   static label = 'I Want to Break Free';

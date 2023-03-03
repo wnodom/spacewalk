@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { NgClass, NgFor } from '@angular/common';
 
 const bigStep = 5;
 const smallStep = 1;
@@ -7,7 +8,9 @@ const smallStep = 1;
 @Component({
   selector: 'example-chessboard',
   templateUrl: './example-chessboard.component.html',
-  styleUrls: ['./example-chessboard.component.scss']
+  styleUrls: ['./example-chessboard.component.scss'],
+  standalone: true,
+  imports: [NgClass, NgFor]
 })
 export class ExampleChessboardComponent implements OnInit {
   static label = 'The Grid of Kings';

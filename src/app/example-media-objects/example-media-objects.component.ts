@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { NgFor, AsyncPipe } from '@angular/common';
+import { Observable, map } from 'rxjs';
 
+import { MediaObjectComponent } from '../media-object/media-object.component';
 import { SpaceImagesService, SpaceImage } from '../space-images.service';
-
 import { shuffleArrayInPlace } from '../utils';
 
 @Component({
   selector: 'example-media-objects',
   templateUrl: './example-media-objects.component.html',
-  styleUrls: ['./example-media-objects.component.scss']
+  styleUrls: ['./example-media-objects.component.scss'],
+  standalone: true,
+  imports: [NgFor, MediaObjectComponent, AsyncPipe]
 })
 export class ExampleMediaObjectsComponent {
   static label = 'I Object!';

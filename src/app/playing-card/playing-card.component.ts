@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgClass, NgIf, NgFor } from '@angular/common';
 
 const imageDir = '/assets/card-faces';
 
@@ -28,7 +29,9 @@ const rankToNumberOfPips: Record<string, number> = {
 @Component({
   selector: 'playing-card',
   templateUrl: './playing-card.component.html',
-  styleUrls: ['./playing-card.component.scss']
+  styleUrls: ['./playing-card.component.scss'],
+  standalone: true,
+  imports: [NgClass, NgIf, NgFor]
 })
 export class PlayingCardComponent implements OnInit {
   @Input() suit = '';
