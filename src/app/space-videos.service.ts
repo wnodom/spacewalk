@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-import { spaceVideosData } from './space-videos-data';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
 
 export interface SpaceVideo {
   title: string;
@@ -12,6 +10,7 @@ export interface SpaceVideo {
 }
 
 const videoBaseUrl = 'https://www.youtube.com/embed';
+const videoDetailsUrl = '/assets/_video-details.json';
 
 // Generate a videoUrl property for each item
 // by combining the base URL with the video ID.
@@ -28,13 +27,13 @@ function addVideoUrl(items: SpaceVideo[]): SpaceVideo[] {
 })
 export class SpaceVideosService {
 
-  load(endpoint: string): Observable<SpaceVideo[]> {
+  constructor(private http: HttpClient) { }
+  
+  load(): Observable<SpaceVideo[]> {
 
-    // Coerce the raw data into a SpaceVideo array.
-    const spaceVideos =
-      (spaceVideosData as Record<string, unknown>)[endpoint] as SpaceVideo[];
-
-    return of(spaceVideos).pipe(map(addVideoUrl));
+    return this.http.get<SpaceVideo[]>(videoDetailsUrl)
+      .pipe(map(addVideoUrl))
+    ;
   }
 
 }

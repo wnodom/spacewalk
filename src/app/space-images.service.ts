@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-import { spaceImagesData } from './space-images-data';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
 
 export interface SpaceImage {
   label: string;
@@ -14,6 +12,8 @@ export interface SpaceImage {
 }
 
 const imageBaseUrl = '/assets/space';
+const imageDetailsFilename = '_image-details.json';
+const imageThumbnailsDirName = '_thumbnails';
 
 // Generate an imageUrl property for any item that contains an imageFilename
 // property. The imageUrl is the base image URL plus the endpoint and the
@@ -29,6 +29,7 @@ function addImageUrls(items: SpaceImage[], endpoint: string): SpaceImage[] {
     }
 
     const encodedFilename: string = encodeURIComponent(itemInfo.imageFilename);
+    const encodedEndpoint: string = encodeURIComponent(endpoint);
 
     // Only add the image URLs if there's an image filename.
     //
@@ -37,7 +38,7 @@ function addImageUrls(items: SpaceImage[], endpoint: string): SpaceImage[] {
       const newItemInfo = { ...itemInfo };
 
       newItemInfo.imageUrl = imageBaseUrl
-        + '/' + endpoint
+        + '/' + encodedEndpoint
         + '/' + encodedFilename
       ;
 
@@ -46,8 +47,9 @@ function addImageUrls(items: SpaceImage[], endpoint: string): SpaceImage[] {
       if (itemInfo.imageFilename.toLowerCase().endsWith('.svg')) {
         newItemInfo.imageThumbnailUrl = newItemInfo.imageUrl;
       } else {
-        newItemInfo.imageThumbnailUrl = imageBaseUrl + '-thumbnails'
-          + '/' + endpoint
+        newItemInfo.imageThumbnailUrl = imageBaseUrl
+          + '/' + encodedEndpoint
+          + '/' + imageThumbnailsDirName
           + '/' + encodedFilename
         ;
       }
@@ -64,15 +66,18 @@ function addImageUrls(items: SpaceImage[], endpoint: string): SpaceImage[] {
 })
 export class SpaceImagesService {
 
+  constructor(private http: HttpClient) { }
+
   load(endpoint: string): Observable<SpaceImage[]> {
 
-    // Coerce the raw data into a SpaceImage array.
-    const spaceImages =
-      (spaceImagesData as Record<string, unknown>)[endpoint] as SpaceImage[];
+    const url: string = imageBaseUrl
+      + '/' + encodeURIComponent(endpoint)
+      + '/' + imageDetailsFilename
+    ;
 
-    return of(spaceImages).pipe(
-      map(allItems => addImageUrls(allItems, endpoint))
-    );
+    return this.http.get<SpaceImage[]>(url)
+      .pipe(
+        map(allItems => addImageUrls(allItems, endpoint))
+      );
   }
-
 }

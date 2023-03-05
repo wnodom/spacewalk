@@ -1,0 +1,50 @@
+[
+  {
+    "description": "Smallest and closest planet to the Sun in the Solar System",
+    "imageFilename": "Mercury_in_color_-_Prockter07-edit1.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Mercury_(planet)",
+    "label": "Mercury"
+  },
+  {
+    "description": "Second planet from the Sun in the Solar System",
+    "imageFilename": "Venus-real_color.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Venus",
+    "label": "Venus"
+  },
+  {
+    "description": "Third planet from the Sun in the Solar System",
+    "imageFilename": "The_Earth_seen_from_Apollo_17.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Earth",
+    "label": "Earth"
+  },
+  {
+    "description": "Fourth planet from the Sun in the Solar System",
+    "imageFilename": "OSIRIS_Mars_true_color.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Mars",
+    "label": "Mars"
+  },
+  {
+    "description": "Fifth planet from the Sun in the Solar System",
+    "imageFilename": "Jupiter_and_its_shrunken_Great_Red_Spot.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Jupiter",
+    "label": "Jupiter"
+  },
+  {
+    "description": "Sixth planet from the Sun in the Solar System",
+    "imageFilename": "Saturn_during_Equinox.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Saturn",
+    "label": "Saturn"
+  },
+  {
+    "description": "Seventh planet from the Sun in the Solar System",
+    "imageFilename": "Uranus2.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Uranus",
+    "label": "Uranus"
+  },
+  {
+    "description": "Eighth and farthest planet from the Sun in the Solar System",
+    "imageFilename": "Neptune_Full.jpg",
+    "infoUrl": "https://en.wikipedia.org/wiki/Neptune",
+    "label": "Neptune"
+  }
+]

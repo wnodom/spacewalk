@@ -20,7 +20,7 @@ export class ExampleVideoViewerComponent {
   videosObservable: Observable<SpaceVideo[]>;
 
   constructor(svc: SpaceVideosService) {
-    this.videosObservable = svc.load('misc');
+    this.videosObservable = svc.load();
   }
 
   setCurrentVideo(v: SpaceVideo) {
