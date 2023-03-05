@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./example-centering.component.scss'],
   standalone: true
 })
-export class ExampleCenteringComponent {
-  static label = 'Best Feature Ever!!1!';
-}
+export default class ExampleCenteringComponent { }

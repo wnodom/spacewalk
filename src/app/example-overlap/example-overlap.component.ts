@@ -11,8 +11,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
   standalone: true,
   imports: [NgFor, AsyncPipe]
 })
-export class ExampleOverlapComponent {
-  static label = 'When Worlds Collide';
+export default class ExampleOverlapComponent {
 
   imageItems: Observable<SpaceImage[]>;
 

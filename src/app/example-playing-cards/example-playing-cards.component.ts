@@ -10,8 +10,7 @@ import { PlayingCardComponent } from '../playing-card/playing-card.component';
   standalone: true,
   imports: [NgFor, PlayingCardComponent]
 })
-export class ExamplePlayingCardsComponent {
-  static label = 'Playing With a Full Deck';
+export default class ExamplePlayingCardsComponent {
 
   suits: string[] = [
     'spades',

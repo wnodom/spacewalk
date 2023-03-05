@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./example-forms.component.scss'],
   standalone: true
 })
-export class ExampleFormsComponent {
-  static label = 'Plato Would be Proud';
-}
+export default class ExampleFormsComponent { }

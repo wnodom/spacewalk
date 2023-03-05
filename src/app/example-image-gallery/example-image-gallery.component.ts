@@ -11,8 +11,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
   standalone: true,
   imports: [NgFor, AsyncPipe]
 })
-export class ExampleImageGalleryComponent {
-  static label = 'Ooooh Pretty';
+export default class ExampleImageGalleryComponent {
 
   imageItems: Observable<SpaceImage[]>;
 

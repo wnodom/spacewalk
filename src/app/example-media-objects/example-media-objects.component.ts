@@ -13,8 +13,7 @@ import { shuffleArrayInPlace } from '../utils';
   standalone: true,
   imports: [NgFor, MediaObjectComponent, AsyncPipe]
 })
-export class ExampleMediaObjectsComponent {
-  static label = 'I Object!';
+export default class ExampleMediaObjectsComponent {
 
   imageItems: Observable<SpaceImage[]>;
 

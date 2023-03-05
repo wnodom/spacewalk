@@ -13,8 +13,7 @@ import { shuffleArrayInPlace } from '../utils';
   standalone: true,
   imports: [NgFor, CaptionedImageComponent, AsyncPipe]
 })
-export class ExampleTransformComponent {
-  static label = 'I Want to Break Free';
+export default class ExampleTransformComponent {
 
   imageItems: Observable<SpaceImage[]>;
 

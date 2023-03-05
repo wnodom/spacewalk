@@ -5,7 +5,7 @@
 <a *ngFor="let example of examples"
   [routerLink]=" '/' + example.path "
 >
-  {{ example.component.label || example.path }}
+  {{ example.title ?? example.path }}
 </a>
 
 <a routerLink="/about">

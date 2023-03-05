@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./example-sandbox.component.scss'],
   standalone: true
 })
-export class ExampleSandboxComponent {
-  static label = 'Some Assembly Required';
-}
+export default class ExampleSandboxComponent { }

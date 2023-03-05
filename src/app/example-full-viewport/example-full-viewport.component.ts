@@ -12,8 +12,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
   standalone: true,
   imports: [RouterLink, NgFor, AsyncPipe]
 })
-export class ExampleFullViewportComponent {
-  static label = 'So Much Room for Activities!';
+export default class ExampleFullViewportComponent {
 
   title = 'Full-Viewport Application';
   showNav = true;

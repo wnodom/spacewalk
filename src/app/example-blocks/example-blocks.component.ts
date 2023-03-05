@@ -8,8 +8,7 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor]
 })
-export class ExampleBlocksComponent {
-  static label = 'Playing With Blocks';
+export default class ExampleBlocksComponent {
 
   labels: string[] = [];
 

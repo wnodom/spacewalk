@@ -11,8 +11,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
   standalone: true,
   imports: [NgFor, AsyncPipe]
 })
-export class ExampleSpanningComponent {
-  static label = 'It\'s All Going According to Span';
+export default class ExampleSpanningComponent {
 
   imageItems: Observable<SpaceImage[]>;
 

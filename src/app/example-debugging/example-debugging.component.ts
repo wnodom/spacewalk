@@ -8,8 +8,7 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor]
 })
-export class ExampleDebuggingComponent {
-  static label = 'Good Grids Gone Bad';
+export default class ExampleDebuggingComponent {
 
   labels: string[] = [];
 

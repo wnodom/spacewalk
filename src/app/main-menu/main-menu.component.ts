@@ -11,6 +11,6 @@ import { examples } from '../examples';
   standalone: true,
   imports: [RouterLinkActive, RouterLink, NgFor]
 })
-export class MainMenuComponent {
+export default class MainMenuComponent {
   examples = examples;
 }

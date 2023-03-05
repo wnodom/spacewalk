@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./resources.component.scss'],
   standalone: true
 })
-export class ResourcesComponent { }
+export default class ResourcesComponent { }

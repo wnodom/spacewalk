@@ -13,8 +13,7 @@ import { SpaceVideosService, SpaceVideo } from '../space-videos.service';
   standalone: true,
   imports: [VideoListComponent, VideoPlayerComponent, AsyncPipe]
 })
-export class ExampleVideoViewerComponent {
-  static label = 'And Yet It Moves';
+export default class ExampleVideoViewerComponent {
 
   currentVideo?: SpaceVideo;
   videosObservable: Observable<SpaceVideo[]>;

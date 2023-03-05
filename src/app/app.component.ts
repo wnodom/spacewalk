@@ -19,7 +19,7 @@ export class AppComponent {
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
 
-    let destination = '';
+    let destination: string | undefined = '';
 
     const lastExampleIndex = examples.length - 1;
 
@@ -37,18 +37,18 @@ export class AppComponent {
 
       case 'BracketRight':
         this.currentExampleIndex =
-          this.currentExampleIndex < lastExampleIndex ?
-          this.currentExampleIndex + 1 :
-          lastExampleIndex
+          this.currentExampleIndex < lastExampleIndex
+            ? this.currentExampleIndex + 1
+            : lastExampleIndex
         ;
         destination = examples[this.currentExampleIndex].path;
         break;
 
       case 'BracketLeft':
         this.currentExampleIndex =
-          this.currentExampleIndex > 0 ?
-          this.currentExampleIndex - 1 :
-          0
+          this.currentExampleIndex > 0
+            ? this.currentExampleIndex - 1
+            : 0
         ;
         destination = examples[this.currentExampleIndex].path;
         break;

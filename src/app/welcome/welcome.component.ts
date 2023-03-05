@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./welcome.component.scss'],
   standalone: true
 })
-export class WelcomeComponent { }
+export default class WelcomeComponent { }

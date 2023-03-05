@@ -12,8 +12,7 @@ const smallStep = 1;
   standalone: true,
   imports: [NgClass, NgFor]
 })
-export class ExampleChessboardComponent implements OnInit {
-  static label = 'The Grid of Kings';
+export default class ExampleChessboardComponent implements OnInit {
 
   board: string[][] = Array<string[]>(8).fill( Array<string>(8).fill('') );
   rotx = 0;
