@@ -1,17 +1,3 @@
-<a routerLink="/welcome">
-  What? Who?
-</a>
-
-<a *ngFor="let example of examples"
-  [routerLink]=" '/' + example.path "
->
-  {{ example.title ?? example.path }}
-</a>
-
-<a routerLink="/about">
-  Say "What?" Again
-</a>
-
-<a routerLink="/resources">
-  And Furthermore
+<a *ngFor="let item of menuItems" [routerLink]=" '/' + item.path ">
+  {{ item.title }}
 </a>
