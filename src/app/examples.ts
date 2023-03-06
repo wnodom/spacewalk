@@ -1,6 +1,6 @@
-import { Routes } from '@angular/router';
+import { CustomRoutes } from './custom-route-types';
 
-export const examples: Routes = [
+export const examples: CustomRoutes = [
   {
     path: 'example-centering',
     title: 'Best Feature Ever!!1!',

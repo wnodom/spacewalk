@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, ActivatedRoute } from '@angular/router';
 
-import { examples } from './examples';
+import { CustomRouteData } from './custom-route-types';
 
 @Component({
   selector: 'app-root',
@@ -12,45 +12,42 @@ import { examples } from './examples';
 })
 export class AppComponent {
 
-  private currentExampleIndex = -1;
-
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
 
-    let destination: string | undefined = '';
+    let ar = this.activatedRoute;
+    while (ar.firstChild) {
+      ar = ar.firstChild;
+    }
 
-    const lastExampleIndex = examples.length - 1;
+    const activatedRouteConfigData = ar.snapshot.data as CustomRouteData;
+
+    const nextPath = activatedRouteConfigData.nextPath;
+    const previousPath = activatedRouteConfigData.previousPath;
+
+    let destination: string | undefined = '';
 
     switch (event.code) {
 
       case 'Backquote':
         destination = '/welcome';
-        this.currentExampleIndex = -1;
         break;
 
       case 'Backslash':
         destination = '/menu';
-        this.currentExampleIndex = -1;
         break;
 
       case 'BracketRight':
-        this.currentExampleIndex =
-          this.currentExampleIndex < lastExampleIndex
-            ? this.currentExampleIndex + 1
-            : lastExampleIndex
-        ;
-        destination = examples[this.currentExampleIndex].path;
+        destination = nextPath;
         break;
 
       case 'BracketLeft':
-        this.currentExampleIndex =
-          this.currentExampleIndex > 0
-            ? this.currentExampleIndex - 1
-            : 0
-        ;
-        destination = examples[this.currentExampleIndex].path;
+        destination = previousPath;
         break;
     }
 
