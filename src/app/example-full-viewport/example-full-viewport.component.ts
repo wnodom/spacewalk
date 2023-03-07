@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { SpaceImagesService, SpaceImage } from '../space-images.service';
 
 @Component({
-  selector: 'example-full-viewport',
+  selector: 'eva-example-full-viewport',
   templateUrl: './example-full-viewport.component.html',
   styleUrls: ['./example-full-viewport.component.scss'],
   standalone: true,

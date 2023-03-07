@@ -12,10 +12,10 @@
   background-color: lightblue;
 }
 
-video-list    { grid-area: list; }
-video-player  { grid-area: player; }
+eva-video-list    { grid-area: list; }
+eva-video-player  { grid-area: player; }
 
-video-list {
+eva-video-list {
   height: 130vh;
   display: block;
   background: black;
@@ -39,6 +39,6 @@ video-list {
 }
 
 /* Hide scrollbar on Chrome, Safari */
-video-list::-webkit-scrollbar {
+eva-video-list::-webkit-scrollbar {
   display: none;
 }

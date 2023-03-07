@@ -25,6 +25,24 @@
         "@angular-eslint/prefer-on-push-component-change-detection": "off",
         "@angular-eslint/prefer-output-readonly": "off",
 
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": ["element", "attribute"],
+            "prefix": ["app", "eva"],
+            "style": "kebab-case"
+          }
+        ],
+
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": ["element", "attribute"],
+            "prefix": ["app", "eva"],
+            "style": "kebab-case"
+          }
+        ],
+
         // @angular-eslint/sort-ngmodule-metadata-arrays is supposed to
         // eventually be replaced by @angular-eslint/sort-imports-metadata,
         // at which point this rule may be reinstated (especially if it

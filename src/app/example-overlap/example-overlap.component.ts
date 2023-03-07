@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { SpaceImagesService, SpaceImage } from '../space-images.service';
 
 @Component({
-  selector: 'example-overlap',
+  selector: 'eva-example-overlap',
   templateUrl: './example-overlap.component.html',
   styleUrls: ['./example-overlap.component.scss'],
   standalone: true,

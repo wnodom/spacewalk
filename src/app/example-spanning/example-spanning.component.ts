@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { SpaceImagesService, SpaceImage } from '../space-images.service';
 
 @Component({
-  selector: 'example-spanning',
+  selector: 'eva-example-spanning',
   templateUrl: './example-spanning.component.html',
   styleUrls: ['./example-spanning.component.scss'],
   standalone: true,

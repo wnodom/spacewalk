@@ -15,7 +15,7 @@ function ensureTitlesAreStrings(item: CustomRoute): CustomRoute {
 }
 
 @Component({
-  selector: 'main-menu',
+  selector: 'eva-main-menu',
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.scss'],
   standalone: true,

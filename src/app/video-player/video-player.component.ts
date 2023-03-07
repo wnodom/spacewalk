@@ -5,7 +5,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { SpaceVideo } from '../space-videos.service';
 
 @Component({
-  selector: 'video-player',
+  selector: 'eva-video-player',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss'],
   standalone: true,

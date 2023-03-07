@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'example-blocks',
+  selector: 'eva-example-blocks',
   templateUrl: './example-blocks.component.html',
   styleUrls: ['./example-blocks.component.scss'],
   standalone: true,

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'example-debugging',
+  selector: 'eva-example-debugging',
   templateUrl: './example-debugging.component.html',
   styleUrls: ['./example-debugging.component.scss'],
   standalone: true,

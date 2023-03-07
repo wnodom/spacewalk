@@ -5,7 +5,7 @@ import { VideoThumbnailComponent } from '../video-thumbnail/video-thumbnail.comp
 import { SpaceVideo } from '../space-videos.service';
 
 @Component({
-  selector: 'video-list',
+  selector: 'eva-video-list',
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.scss'],
   standalone: true,

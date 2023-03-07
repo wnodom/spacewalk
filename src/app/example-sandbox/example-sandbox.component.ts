@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'example-sandbox',
+  selector: 'eva-example-sandbox',
   templateUrl: './example-sandbox.component.html',
   styleUrls: ['./example-sandbox.component.scss'],
   standalone: true

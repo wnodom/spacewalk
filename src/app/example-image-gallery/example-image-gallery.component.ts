@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { SpaceImagesService, SpaceImage } from '../space-images.service';
 
 @Component({
-  selector: 'example-image-gallery',
+  selector: 'eva-example-image-gallery',
   templateUrl: './example-image-gallery.component.html',
   styleUrls: ['./example-image-gallery.component.scss'],
   standalone: true,

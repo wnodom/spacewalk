@@ -4,7 +4,7 @@ import { NgIf } from '@angular/common';
 import { SpaceVideo } from '../space-videos.service';
 
 @Component({
-  selector: 'video-thumbnail',
+  selector: 'eva-video-thumbnail',
   templateUrl: './video-thumbnail.component.html',
   styleUrls: ['./video-thumbnail.component.scss'],
   standalone: true,

@@ -6,7 +6,7 @@ const bigStep = 5;
 const smallStep = 1;
 
 @Component({
-  selector: 'example-chessboard',
+  selector: 'eva-example-chessboard',
   templateUrl: './example-chessboard.component.html',
   styleUrls: ['./example-chessboard.component.scss'],
   standalone: true,

@@ -7,7 +7,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
 import { shuffleArrayInPlace } from '../utils';
 
 @Component({
-  selector: 'example-transform',
+  selector: 'eva-example-transform',
   templateUrl: './example-transform.component.html',
   styleUrls: ['./example-transform.component.scss'],
   standalone: true,

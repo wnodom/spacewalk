@@ -31,7 +31,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "",
+      "prefix": "eva",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

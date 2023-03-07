@@ -27,7 +27,7 @@ const rankToNumberOfPips: Record<string, number> = {
 };
 
 @Component({
-  selector: 'playing-card',
+  selector: 'eva-playing-card',
   templateUrl: './playing-card.component.html',
   styleUrls: ['./playing-card.component.scss'],
   standalone: true,

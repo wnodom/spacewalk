@@ -4,7 +4,7 @@ import { NgFor } from '@angular/common';
 import { PlayingCardComponent } from '../playing-card/playing-card.component';
 
 @Component({
-  selector: 'example-playing-cards',
+  selector: 'eva-example-playing-cards',
   templateUrl: './example-playing-cards.component.html',
   styleUrls: ['./example-playing-cards.component.scss'],
   standalone: true,

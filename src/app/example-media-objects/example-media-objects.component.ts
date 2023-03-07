@@ -7,7 +7,7 @@ import { SpaceImagesService, SpaceImage } from '../space-images.service';
 import { shuffleArrayInPlace } from '../utils';
 
 @Component({
-  selector: 'example-media-objects',
+  selector: 'eva-example-media-objects',
   templateUrl: './example-media-objects.component.html',
   styleUrls: ['./example-media-objects.component.scss'],
   standalone: true,

@@ -1,6 +1,6 @@
-<video-list
+<eva-video-list
   [videoData]="(videosObservable | async) ?? []"
   (selectVideo)="setCurrentVideo($event)"
 />
 
-<video-player [video]="currentVideo" />
+<eva-video-player [video]="currentVideo" />

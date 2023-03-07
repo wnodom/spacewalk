@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'media-object',
+  selector: 'eva-media-object',
   templateUrl: './media-object.component.html',
   styleUrls: ['./media-object.component.scss'],
   standalone: true
