@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, TitleStrategy } from '@angular/router';
 
 import { CustomRoute, CustomRoutes } from './custom-route-types';
-
+import { AppTitleStrategy } from './app-title-strategy.service';
 import { AppCustomPreloader } from './app-custom-preloader';
 
 function setNextAndPreviousPaths(
@@ -144,6 +144,9 @@ const appRoutes: CustomRoutes = [
     }
   )],
   exports: [RouterModule],
-  providers: [AppCustomPreloader]
+  providers: [
+    AppCustomPreloader,
+    { provide: TitleStrategy, useClass: AppTitleStrategy },
+  ]
 })
 export class AppRoutingModule { }
