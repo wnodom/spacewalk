@@ -2,6 +2,7 @@ import { Data, Route } from "@angular/router";
 
 export interface SpacewalkRouteData extends Data {
   preload?: boolean;
+  teaser?: string;
   nextPath?: string;
   previousPath?: string;
 }

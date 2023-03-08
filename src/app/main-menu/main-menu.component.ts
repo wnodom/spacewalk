@@ -1,18 +1,8 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
-import { SpacewalkRoute } from '../spacewalk-route-types';
-import { featureRoutes } from '../app-routing.module';
-
-function ensureTitlesAreStrings(item: SpacewalkRoute): SpacewalkRoute {
-  return {
-    ...item,
-    title: typeof(item.title) === 'string'
-      ? item.title
-      : item.path
-  };
-}
+import { SpacewalkRoutes } from '../spacewalk-route-types';
 
 @Component({
   selector: 'eva-main-menu',
@@ -22,9 +12,13 @@ function ensureTitlesAreStrings(item: SpacewalkRoute): SpacewalkRoute {
   imports: [RouterLink, NgFor]
 })
 export default class MainMenuComponent {
-  menuItems = featureRoutes
-    // Don't include this menu in the menu choices
-    .filter(item => item.path !== 'menu')
-    .map(ensureTitlesAreStrings)
-  ;
+
+  menuItems: SpacewalkRoutes;
+
+  constructor(router: Router) {
+    // Only show items that have a teaser
+    this.menuItems = (router.config as SpacewalkRoutes)
+      .filter((item) => item.data?.teaser)
+    ;
+  }
 }

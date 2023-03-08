@@ -1,3 +1,3 @@
 <a *ngFor="let item of menuItems" [routerLink]=" '/' + item.path ">
-  {{ item.title }}
+  {{ item.data?.teaser }}
 </a>
