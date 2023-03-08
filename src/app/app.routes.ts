@@ -1,9 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, TitleStrategy } from '@angular/router';
-
 import { SpacewalkRoute, SpacewalkRoutes } from './spacewalk-route-types';
-import { SpacewalkTitleStrategy } from './spacewalk-title-strategy.service';
-import { SpacewalkPreloadingStrategy } from './spacewalk-preloading-strategy.service';
 
 function setNextAndPreviousPaths(
   route: SpacewalkRoute,
@@ -181,24 +176,10 @@ const featureRoutes: SpacewalkRoutes = [
   }
 ];
 
-const appRoutes: SpacewalkRoutes = [
+export const APP_ROUTES: SpacewalkRoutes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
 
   ...featureRoutes.map(setNextAndPreviousPaths),
 
   { path: '**', redirectTo: 'menu' }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(
-    appRoutes,
-    {
-      preloadingStrategy: SpacewalkPreloadingStrategy
-    }
-  )],
-  exports: [RouterModule],
-  providers: [
-    { provide: TitleStrategy, useClass: SpacewalkTitleStrategy },
-  ]
-})
-export class AppRoutingModule { }
