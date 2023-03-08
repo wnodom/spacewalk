@@ -1,10 +1,7 @@
 :host {
-  padding: 20px;
   display: grid;
-
   min-height: 100vh;
   place-content: center;
-  
   grid-template-columns: repeat(5, 100px);
   grid-template-rows: repeat(5, 100px);
   grid-gap: 20px;

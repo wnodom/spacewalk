@@ -1,7 +1,7 @@
 :host {
   display: grid;
   padding: 20px;
-
+  justify-content: center;
   grid-template-columns: repeat(5, 100px);
   grid-template-rows: repeat(3, 100px);
   grid-auto-rows: 200px;
