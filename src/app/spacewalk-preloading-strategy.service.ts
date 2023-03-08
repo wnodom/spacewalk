@@ -7,7 +7,7 @@ import { CustomRoute, CustomRouteData } from './custom-route-types';
 @Injectable({
   providedIn: 'root'
 })
-export class AppCustomPreloader implements PreloadingStrategy {
+export class SpacewalkPreloadingStrategy implements PreloadingStrategy {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 

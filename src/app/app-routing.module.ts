@@ -3,7 +3,9 @@ import { RouterModule, TitleStrategy } from '@angular/router';
 
 import { CustomRoute, CustomRoutes } from './custom-route-types';
 import { AppTitleStrategy } from './app-title-strategy.service';
-import { AppCustomPreloader } from './app-custom-preloader';
+import {
+  SpacewalkPreloadingStrategy
+} from './spacewalk-preloading-strategy.service';
 
 function setNextAndPreviousPaths(
   route: CustomRoute,
@@ -140,12 +142,11 @@ const appRoutes: CustomRoutes = [
   imports: [RouterModule.forRoot(
     appRoutes,
     {
-      preloadingStrategy: AppCustomPreloader
+      preloadingStrategy: SpacewalkPreloadingStrategy
     }
   )],
   exports: [RouterModule],
   providers: [
-    AppCustomPreloader,
     { provide: TitleStrategy, useClass: AppTitleStrategy },
   ]
 })
