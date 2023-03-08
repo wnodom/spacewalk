@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { CustomRoute } from '../custom-route-types';
+import { SpacewalkRoute } from '../spacewalk-route-types';
 import { featureRoutes } from '../app-routing.module';
 
-function ensureTitlesAreStrings(item: CustomRoute): CustomRoute {
+function ensureTitlesAreStrings(item: SpacewalkRoute): SpacewalkRoute {
   return {
     ...item,
     title: typeof(item.title) === 'string'

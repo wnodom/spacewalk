@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { PreloadingStrategy, ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
-import { CustomRoute, CustomRouteData } from './custom-route-types';
+import { SpacewalkRoute, SpacewalkRouteData } from './spacewalk-route-types';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class SpacewalkPreloadingStrategy implements PreloadingStrategy {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   preload(
-    routeToCheck: CustomRoute,
+    routeToCheck: SpacewalkRoute,
     load: () => Observable<unknown>
   ): Observable<unknown> {
 
@@ -27,7 +27,7 @@ export class SpacewalkPreloadingStrategy implements PreloadingStrategy {
       ar = ar.firstChild;
     }
 
-    const activatedRouteConfigData = ar.snapshot.data as CustomRouteData;
+    const activatedRouteConfigData = ar.snapshot.data as SpacewalkRouteData;
 
     const nextPath = activatedRouteConfigData.nextPath;
     const previousPath = activatedRouteConfigData.previousPath;

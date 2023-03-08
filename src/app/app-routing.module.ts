@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, TitleStrategy } from '@angular/router';
 
-import { CustomRoute, CustomRoutes } from './custom-route-types';
+import { SpacewalkRoute, SpacewalkRoutes } from './spacewalk-route-types';
 import { SpacewalkTitleStrategy } from './spacewalk-title-strategy.service';
 import { SpacewalkPreloadingStrategy } from './spacewalk-preloading-strategy.service';
 
 function setNextAndPreviousPaths(
-  route: CustomRoute,
+  route: SpacewalkRoute,
   index: number,
-  routeList: CustomRoutes
-) {
+  routeList: SpacewalkRoutes
+): SpacewalkRoute {
   const newRoute = {
 
     // Preserve all existing route info.
@@ -32,7 +32,7 @@ function setNextAndPreviousPaths(
   return newRoute;
 }
 
-export const featureRoutes: CustomRoutes = [
+export const featureRoutes: SpacewalkRoutes = [
   {
     path: 'welcome',
     title: 'What? Who?',
@@ -128,7 +128,7 @@ export const featureRoutes: CustomRoutes = [
   }
 ];
 
-const appRoutes: CustomRoutes = [
+const appRoutes: SpacewalkRoutes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
 
   ...featureRoutes.map(setNextAndPreviousPaths),

@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router, RouterOutlet, ActivatedRoute } from '@angular/router';
 
-import { CustomRouteData } from './custom-route-types';
+import { SpacewalkRouteData } from './spacewalk-route-types';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,7 @@ export class AppComponent {
       ar = ar.firstChild;
     }
 
-    const activatedRouteConfigData = ar.snapshot.data as CustomRouteData;
+    const activatedRouteConfigData = ar.snapshot.data as SpacewalkRouteData;
 
     const nextPath = activatedRouteConfigData.nextPath;
     const previousPath = activatedRouteConfigData.previousPath;
