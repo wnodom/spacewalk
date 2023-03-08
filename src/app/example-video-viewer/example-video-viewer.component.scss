@@ -9,7 +9,10 @@
   height: 100vh;
   overflow: hidden;
   perspective: 70em;
-  background-color: lightblue;
+
+  // Give the background some variety, so the holes in the filmstrip
+  // border will be a little more obvious.
+  background: linear-gradient(to bottom right, cornsilk, lightskyblue);
 }
 
 eva-video-list    { grid-area: list; }
@@ -18,21 +21,49 @@ eva-video-player  { grid-area: player; }
 eva-video-list {
   height: 130vh;
   display: block;
-  background: black;
+
   overflow-y: auto;
-  padding: 10px;
+
+  background: black;
+
+  padding: 0;
   padding-top: 10vh;
   padding-bottom: 10vh;
+
+  // Only extend the background to the padding box (instead of all
+  // the way to the border), so the transparent gaps in the border
+  // image will be visible.
+  background-clip: padding-box;
+
+  // Give the left and right borders a size, so the border image
+  // has room to appear.
+  border-left: 15px solid;
+  border-right: 15px solid;
+
+  // Use a repeating linear gradient to flip the border image
+  // between black and transparent, to create the "holes" in the
+  // filmstrip edges.
+  border-image: repeating-linear-gradient(
+    black,
+    black 15px,
+    transparent 15px,
+    transparent 30px
+  ) 1;
+
+  box-shadow:
+    // Add the outermost edge of the filmstrip with an unblurred,
+    // solid black shadow.
+    0 0 0 15px black,
+
+    // Give the filmstrip a fuzzy drop shadow.
+    -20px 15px 10px 0 rgba(0, 0, 0, 0.33),
+  ;
+  
   transform:
     rotate(-5deg)
     translate(85px, -15vh)
     rotateY(30deg)
   ;
-  box-shadow: 20px 15px 10px 0 rgba(0, 0, 0, 0.33);
-  outline: 15px solid black;
-  border-left: 15px solid;
-  border-right: 15px solid;
-  border-image: repeating-linear-gradient(black, black 15px, lightblue 15px, lightblue 30px) 1;
 
   /* Hide scrollbar on Firefox */
   scrollbar-width: none;
