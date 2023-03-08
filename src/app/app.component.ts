@@ -2,6 +2,7 @@ import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core'
 import { Router, RouterOutlet, ActivatedRoute } from '@angular/router';
 
 import { SpacewalkRouteData } from './spacewalk-route-types';
+import { lastFirstChild } from './utils';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +22,7 @@ export class AppComponent {
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
 
-    let ar = this.activatedRoute;
-    while (ar.firstChild) {
-      ar = ar.firstChild;
-    }
-
+    const ar = lastFirstChild(this.activatedRoute);
     const activatedRouteConfigData = ar.snapshot.data as SpacewalkRouteData;
 
     const nextPath = activatedRouteConfigData.nextPath;

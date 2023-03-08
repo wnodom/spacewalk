@@ -1,3 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
+
 export function shuffleArrayInPlace(array: unknown[]) {
   let currentIndex = array.length;
   let randomIndex: number;
@@ -14,4 +16,13 @@ export function shuffleArrayInPlace(array: unknown[]) {
   }
 
   return array;
+}
+
+export function lastFirstChild(ar: ActivatedRoute): ActivatedRoute {
+
+  while (ar.firstChild) {
+    ar = ar.firstChild;
+  }
+
+  return ar;
 }

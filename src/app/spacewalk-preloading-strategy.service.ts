@@ -3,6 +3,7 @@ import { PreloadingStrategy, ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
 import { SpacewalkRoute, SpacewalkRouteData } from './spacewalk-route-types';
+import { lastFirstChild } from './utils';
 
 @Injectable({
   providedIn: 'root'
@@ -22,11 +23,7 @@ export class SpacewalkPreloadingStrategy implements PreloadingStrategy {
       return load();
     }
 
-    let ar = this.activatedRoute;
-    while (ar.firstChild) {
-      ar = ar.firstChild;
-    }
-
+    const ar = lastFirstChild(this.activatedRoute);
     const activatedRouteConfigData = ar.snapshot.data as SpacewalkRouteData;
 
     const nextPath = activatedRouteConfigData.nextPath;
