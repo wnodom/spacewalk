@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass, NgIf, NgFor } from '@angular/common';
 
 const imageDir = '/assets/card-faces';
@@ -30,6 +30,7 @@ const rankToNumberOfPips: Record<string, number> = {
   selector: 'eva-playing-card',
   templateUrl: './playing-card.component.html',
   styleUrls: ['./playing-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [NgClass, NgIf, NgFor]
 })

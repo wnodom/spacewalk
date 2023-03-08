@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink, Router } from '@angular/router';
 
@@ -8,6 +8,7 @@ import { SpacewalkRoutes } from '../spacewalk-route-types';
   selector: 'eva-main-menu',
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [RouterLink, NgFor]
 })

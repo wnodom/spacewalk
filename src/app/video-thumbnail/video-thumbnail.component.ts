@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NgIf } from '@angular/common';
 
 import { SpaceVideo } from '../space-videos.service';
@@ -7,6 +7,7 @@ import { SpaceVideo } from '../space-videos.service';
   selector: 'eva-video-thumbnail',
   templateUrl: './video-thumbnail.component.html',
   styleUrls: ['./video-thumbnail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [NgIf]
 })

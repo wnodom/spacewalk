@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 
@@ -10,6 +10,7 @@ import { SpaceVideosService, SpaceVideo } from '../space-videos.service';
   selector: 'eva-example-video-viewer',
   templateUrl: './example-video-viewer.component.html',
   styleUrls: ['./example-video-viewer.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [VideoListComponent, VideoPlayerComponent, AsyncPipe]
 })

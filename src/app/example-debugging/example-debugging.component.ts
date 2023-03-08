@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'eva-example-debugging',
   templateUrl: './example-debugging.component.html',
   styleUrls: ['./example-debugging.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [NgFor]
 })

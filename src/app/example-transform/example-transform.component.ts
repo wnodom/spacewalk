@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgFor, AsyncPipe } from '@angular/common';
 import { Observable, map } from 'rxjs';
 
@@ -10,6 +10,7 @@ import { shuffleArrayInPlace } from '../utils';
   selector: 'eva-example-transform',
   templateUrl: './example-transform.component.html',
   styleUrls: ['./example-transform.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [NgFor, CaptionedImageComponent, AsyncPipe]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { NgClass, NgFor } from '@angular/common';
 
@@ -9,6 +9,7 @@ const smallStep = 1;
   selector: 'eva-example-chessboard',
   templateUrl: './example-chessboard.component.html',
   styleUrls: ['./example-chessboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [NgClass, NgFor]
 })

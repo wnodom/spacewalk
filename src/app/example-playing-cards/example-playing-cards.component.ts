@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 import { PlayingCardComponent } from '../playing-card/playing-card.component';
@@ -7,6 +7,7 @@ import { PlayingCardComponent } from '../playing-card/playing-card.component';
   selector: 'eva-example-playing-cards',
   templateUrl: './example-playing-cards.component.html',
   styleUrls: ['./example-playing-cards.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [NgFor, PlayingCardComponent]
 })

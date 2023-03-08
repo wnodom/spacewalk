@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { Router, RouterOutlet, ActivatedRoute } from '@angular/router';
 
 import { SpacewalkRouteData } from './spacewalk-route-types';
@@ -7,6 +7,7 @@ import { SpacewalkRouteData } from './spacewalk-route-types';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [RouterOutlet]
 })
