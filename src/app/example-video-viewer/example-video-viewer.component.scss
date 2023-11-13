@@ -15,10 +15,10 @@
   background: linear-gradient(to bottom right, cornsilk, lightskyblue);
 }
 
-eva-video-list    { grid-area: list; }
 eva-video-player  { grid-area: player; }
 
 eva-video-list {
+  grid-area: list;
   height: 130vh;
   display: block;
 
